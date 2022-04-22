@@ -6,6 +6,8 @@ var logger = require("morgan");
 var mongoose = require("mongoose");
 var config = require("./config");
 var appointmentRouter = require("./routes/appointment");
+var tutorRouter = require("./routes/tutors");
+
 
 // Port Definition
 var port = 3000;
@@ -19,6 +21,8 @@ app.use(cors());
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.json());
 app.use("/appointments", appointmentRouter);
+app.use("/tutors", tutorRouter);
+
 
 
 const dbUrl = config.dbUrl;

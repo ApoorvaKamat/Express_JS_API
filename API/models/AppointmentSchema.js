@@ -15,6 +15,6 @@ let appointmentSchema = new Schema (
     }
 )
 
-let AppointmentSchema = mongoose.model("post", appointmentSchema,'appointment');
+let AppointmentSchema = mongoose.model("appPost", appointmentSchema,'appointment');
 
 module.exports = AppointmentSchema;
